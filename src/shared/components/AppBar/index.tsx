@@ -1,10 +1,17 @@
 import { AppBar as MUIAppBar } from '@mui/material'
-import Box from '@mui/material/Box'
-import Toolbar from '@mui/material/Toolbar'
-import Typography from '@mui/material/Typography'
-import Button from '@mui/material/Button'
-import IconButton from '@mui/material/IconButton'
+
+import { 
+  Box,
+  Toolbar,
+  Typography,
+  Button,
+  IconButton,
+  Switch
+} from '@mui/material'
+
 import MenuIcon from '@mui/icons-material/Menu'
+
+const label = { inputProps: { 'aria-label': 'Switch demo' } }
 
 const AppBar = () => {
   return (
@@ -23,7 +30,7 @@ const AppBar = () => {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             EasyPizzey
           </Typography>
-          <Button color="inherit">Login</Button>
+          <Switch {...label} />
         </Toolbar>
       </MUIAppBar>
     </Box>
